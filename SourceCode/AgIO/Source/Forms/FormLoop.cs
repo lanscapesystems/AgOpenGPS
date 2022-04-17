@@ -86,7 +86,7 @@ namespace AgIO
             }
             else
             {
-                btnUDP.BackColor = Color.Gainsboro;
+                btnUDP.BackColor = Color.FromArgb(20,20,40); 
                 lblIP.Text = "Off";
             }
 
@@ -309,7 +309,7 @@ namespace AgIO
 
             if (currentHello != lastHelloMachine)
             {
-                if (currentHello) btnMachine.BackColor = Color.LightGreen;
+                if (currentHello) btnMachine.BackColor = Color.Green;
                 else btnMachine.BackColor = Color.Transparent;
                 lastHelloMachine = currentHello;
                 ShowAgIO();
@@ -319,7 +319,7 @@ namespace AgIO
 
             if (currentHello != lastHelloAutoSteer)
             {
-                if (currentHello) btnSteer.BackColor = Color.LightGreen;
+                if (currentHello) btnSteer.BackColor = Color.Green;
                 else btnSteer.BackColor = Color.Transparent;
                 lastHelloAutoSteer = currentHello;
                 ShowAgIO();
@@ -329,7 +329,7 @@ namespace AgIO
 
             if (currentHello != lastHelloIMU)
             {
-                if (currentHello) btnIMU.BackColor = Color.LightGreen;
+                if (currentHello) btnIMU.BackColor = Color.Green;
                 else btnIMU.BackColor = Color.Transparent;
                 lastHelloIMU = currentHello;
                 ShowAgIO();
@@ -339,7 +339,7 @@ namespace AgIO
 
             if (currentHello != lastHelloGPS)
             {
-                if (currentHello) btnGPS.BackColor = Color.LightGreen;
+                if (currentHello) btnGPS.BackColor = Color.Green;
                 else btnGPS.BackColor = Color.Transparent;
                 lastHelloGPS = currentHello;
                 ShowAgIO();
@@ -486,15 +486,6 @@ namespace AgIO
                 // Show window in forground.
                 SetForegroundWindow(processName[0].MainWindowHandle);
             }  
-            
-            //{
-            //    //Set foreground window
-            //    if (IsIconic(processName[0].MainWindowHandle))
-            //    {
-            //        ShowWindow(processName[0].MainWindowHandle, 9);
-            //    }
-            //    SetForegroundWindow(processName[0].MainWindowHandle);
-            //}
         }
 
         private void DoTraffic()

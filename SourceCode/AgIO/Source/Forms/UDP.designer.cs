@@ -92,7 +92,7 @@ namespace AgIO
                         new AsyncCallback(ReceiveDataUDPAsync), null);
 
                     isUDPNetworkConnected = true;
-                    btnUDP.BackColor = Color.LightGreen;
+                    btnUDP.BackColor = Color.Green;
                 }
 
                 else
